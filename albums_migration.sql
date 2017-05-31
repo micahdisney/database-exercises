@@ -8,5 +8,6 @@ DROP TABLE IF EXISTS albums;
         name VARCHAR(225),
         release_date INTEGER,
         sales FLOAT,
-        genre LINESTRING
+        genre VARCHAR(225)
       );
+
