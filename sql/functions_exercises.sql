@@ -7,10 +7,7 @@ WHERE first_name = 'Irena'
 GROUP BY gender;
 
 
-SELECT
-  emp_no,
-  first_name,
-  last_name
+SELECT concat(first_name, ' ', last_name)
 FROM employees
 WHERE (first_name = 'Irena'
        OR first_name = 'Vidya'
