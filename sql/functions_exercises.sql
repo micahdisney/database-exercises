@@ -38,12 +38,16 @@ WHERE hire_date BETWEEN '1990-01-01' AND '1999-12-31'
 ORDER BY birth_date ASC, hire_date DESC;
 
 
-SELECT
-  emp_no,
+SELECT count(*),
   first_name,
   last_name
 FROM employees
 WHERE last_name LIKE '%q%'
-      AND NOT '%qu%';
+      AND NOT '%qu%'
+GROUP BY last_name, first_name
+ORDER BY count(*) DESC;
+
+
+
 
 
