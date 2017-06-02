@@ -7,7 +7,10 @@ WHERE first_name = 'Irena'
 GROUP BY gender;
 
 
-SELECT concat(first_name, ' ', last_name)
+SELECT
+  emp_no,
+  first_name,
+  last_name
 FROM employees
 WHERE (first_name = 'Irena'
        OR first_name = 'Vidya'
@@ -15,10 +18,7 @@ WHERE (first_name = 'Irena'
       AND gender = 'M';
 
 
-SELECT
-  emp_no,
-  first_name,
-  last_name
+SELECT concat(first_name, ' ', last_name)
 FROM employees
 WHERE last_name LIKE 'E%'
       AND last_name LIKE '%E'
