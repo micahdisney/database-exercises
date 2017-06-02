@@ -1,12 +1,10 @@
-SELECT
-  emp_no,
-  first_name,
-  last_name
+
+SELECT count(*), gender
 FROM employees
 WHERE first_name = 'Irena'
       OR first_name = 'Vidya'
       OR first_name = 'Maya'
-ORDER BY last_name DESC, first_name DESC;
+GROUP BY gender;
 
 
 SELECT
@@ -49,3 +47,5 @@ SELECT
 FROM employees
 WHERE last_name LIKE '%q%'
       AND NOT '%qu%';
+
+
