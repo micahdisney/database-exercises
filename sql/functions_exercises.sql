@@ -1,5 +1,6 @@
-
-SELECT count(*), gender
+SELECT
+  count(*),
+  gender
 FROM employees
 WHERE first_name = 'Irena'
       OR first_name = 'Vidya'
@@ -22,11 +23,11 @@ SELECT concat(first_name, ' ', last_name)
 FROM employees
 WHERE last_name LIKE 'E%'
       AND last_name LIKE '%E'
-ORDER BY emp_no DESC ;
+ORDER BY emp_no DESC;
 
 
 SELECT
-  emp_no,
+  concat(datediff(curdate(), hire_date), ' days since hired') from_hire,
   first_name,
   last_name,
   hire_date,
